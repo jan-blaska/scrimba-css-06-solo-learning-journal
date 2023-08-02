@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
-    background-color: #1E1E1E;
+    background-color: #f8eecc;
 }
 
 /* -- LAYOUT -- */
@@ -17,28 +17,10 @@ body {
 }
 
 header,
-.top-section {
-    padding: 0px 30px;
-}
-
-@media (min-width: 600px) {
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .header ul {
-        gap: 40px;
-    }
-
-    .header-icon,
-    header h4 {
-        font-size: 1.125rem; /* 18px */
-    }
-
-    .top-section span {
-        font-size: 1rem; /* 16px */
-    }
+.top-section,
+.grid-section,
+footer {
+    padding: 0px 2em;
 }
 
 /* -- HEADER -- */
@@ -69,6 +51,7 @@ header ul {
 
 header ul li {
     text-transform: uppercase;
+    font-size: 0.75rem; /* 12px */
     font-weight: 600;
     padding-top: 3px;
     border-bottom: white solid 3px;
@@ -85,7 +68,7 @@ header ul li:focus {
 /* -- TOP SECTION -- */
 .top-section {
     /*color: #fff;*/
-    background: #000 url('assets/dominican-rep-beach-las-terrenas.jpg');
+    background: #000 url('assets/dominican-rep-2022/beach-las-terrenas.jpg');
     background-size: cover;
     min-height: 400px;
     background-position: center;
@@ -113,4 +96,98 @@ header ul li:focus {
     font-size: 0.75rem; /* 12px */
     text-transform: uppercase;
     padding-top: 5px;
+}
+
+/* -- MEDIA FOR HEADER AND TOP SECTION -- */
+@media (min-width: 600px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .header ul {
+        gap: 40px;
+    }
+
+    .header-icon,
+    header h4 {
+        font-size: 1.125rem; /* 18px */
+    }
+
+    header ul li {
+        font-size: 1rem; /* 16px */
+    }
+    .top-section {
+        min-height: 600px;
+    }
+    .top-section span {
+        font-size: 1rem; /* 16px */
+    }
+}
+
+/* -- GRID SECTION -- */
+.grid-section {
+    display: grid;
+    background-color: #fff;
+    padding: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+
+}
+
+.card h1,
+.card p {
+    margin: 0;
+}
+
+.card span {
+    font-size: 0.75rem; /* 12px */
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.card h1 {
+    margin-bottom: 5px;
+}
+
+
+
+/* -- FOOTER -- */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    padding: 20px 0;
+}
+
+footer h4,
+footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.75rem; /* 12px */
+}
+
+/* -- MEDIA FOR GRID SECTION AND FOOTER -- */
+@media (min-width: 600px) {
+    footer h4,
+    footer p {
+        font-size: 1rem; /* 16px */
+    }
+
+    .card span {
+        font-size: 1rem; /* 16px */
+    }
 }

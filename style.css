@@ -193,3 +193,41 @@ footer p {
         font-size: 1rem; /* 16px */
     }
 }
+
+/* -- ABOUT ME SECTION -- */
+.about-me-section {
+    background-color: black;
+}
+
+.about-me-section img{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;   
+}
+
+.about-me-section-text {
+    background-color: white;
+    padding: 2em;
+}
+
+.about-me-section-text h1 {
+    margin: 0;
+}
+
+.last-paragraph {
+    margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+    .about-me-section img {
+        width: 70%;
+    }
+}
+
+.header-for-grid-section {
+    background-color: white;
+    padding-top: 2em;
+    margin: 0;
+    font-size: 1.125rem;
+    text-align: center;
+}

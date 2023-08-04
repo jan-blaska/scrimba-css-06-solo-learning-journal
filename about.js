@@ -4,7 +4,7 @@ const get = element => document.getElementById(element);
 
 let gridSectionEl = get('grid-section');
 
-gridSectionEl.innerHTML = renderCountriesCards(6);
+gridSectionEl.innerHTML = renderCountriesCards(3);
 
 
 function renderCountriesCards(n) {

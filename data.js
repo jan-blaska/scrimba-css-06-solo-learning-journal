@@ -7,7 +7,7 @@ export const countriesArray = [
            alt: "barcelona park guell"
         },
         date: "february, 2022",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium reprehenderit sint quia nulla sapiente alias. Laborum tenetur commodi cum!"
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium reprehenderit sint quia nulla sapiente alias. Laborum tenetur commodi cum!",
     },
     {
         id: 1,

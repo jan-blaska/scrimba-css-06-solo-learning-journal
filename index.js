@@ -1,6 +1,8 @@
 import { countriesArray } from "/data.js";
 
-const gridSectionEl = document.getElementById('grid-section');
+const get = element => document.getElementById(element);
+
+const gridSectionEl = get('grid-section');
 
 gridSectionEl.innerHTML = renderCountriesCards();
 

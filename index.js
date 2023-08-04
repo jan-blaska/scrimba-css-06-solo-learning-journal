@@ -2,21 +2,34 @@ import { countriesArray } from "/data.js";
 
 const get = element => document.getElementById(element);
 
-const gridSectionEl = get('grid-section');
+let homeBtnEl = get('home');
+let aboutMeBtnEl = get('about-me');
 
-gridSectionEl.innerHTML = renderCountriesCards();
+let i = 0;
 
-function renderCountriesCards() {
+homeBtnEl.addEventListener('click', function() {
+    console.log("Home button clicked");
+    document.getElementById('grid-section').innerHTML = renderCountriesCards(6);
+});
+
+aboutMeBtnEl.addEventListener('click', function() {
+    console.log("About me button clicked");
+    document.getElementById('grid-section').innerHTML = renderCountriesCards(3);
+});
+
+
+function renderCountriesCards(n) {
     let countriesCards = '';
-    countriesArray.forEach(function(country) {
+    
+    for (let i = 0; i < n; i++) {
         countriesCards += `
             <div class="card">
-                <img src=${country.img.url} alt=${country.img.alt}>
-                <span>${country.date}</span>
-                <h1>${country.place}</h1>
-                <p>${country.description}</p>
+                <img src=${countriesArray[i].img.url} alt=${countriesArray[i].img.alt}>
+                <span>${countriesArray[i].date}</span>
+                <h1>${countriesArray[i].place}</h1>
+                <p>${countriesArray[i].description}</p>
             </div>
         `;
-    });
+    };
     return countriesCards;
 }

@@ -49,16 +49,18 @@ header ul {
     margin-left: auto;
 }
 
-header ul li {
+header ul li a {
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 0.75rem; /* 12px */
     font-weight: 600;
     padding-top: 3px;
     border-bottom: white solid 3px;
+    color: black;
 }
 
-header ul li:hover,
-header ul li:focus {
+header ul li a:hover,
+header ul li a:focus {
     color: orange;
     cursor: pointer;
     border-bottom: orange solid 3px;
@@ -113,7 +115,7 @@ header ul li:focus {
         font-size: 1.125rem; /* 18px */
     }
 
-    header ul li {
+    header ul li a {
         font-size: 1rem; /* 16px */
     }
     .top-section {
